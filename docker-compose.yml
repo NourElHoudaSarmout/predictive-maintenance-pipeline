@@ -1,0 +1,14 @@
+services:
+  api:
+    build: ./api/PredictiveMaintenanceApi
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/data:ro
+
+  dashboard:
+    build: ./dashboard
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
