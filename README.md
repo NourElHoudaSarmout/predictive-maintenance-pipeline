@@ -21,7 +21,7 @@ Python simulator -> Azure Blob Storage -> Databricks (PySpark + Isolation Forest
    temperature, vibration and speed. Faults start gradually, like real wear.
    Runs in Docker.
 2. **Azure Blob Storage**: `upload_to_blob.py` uploads the CSV.
-3. **Feature engineering** (`notebooks/feature_engineering.py`): Databricks
+3. **Feature engineering** (`notebooks/feature_engineering.py`): PySpark
    window functions compute a 10-second rolling average, rolling standard
    deviation and rate of change for each sensor.
 4. **Model** (`notebooks/train_model.py`): an Isolation Forest finds unusual
